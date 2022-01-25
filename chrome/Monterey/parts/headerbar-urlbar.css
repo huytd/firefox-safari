@@ -3,8 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
-  --urlbar-width: 600px;
-  --urlbar-minwidth: 600px;
+  --urlbar-width: 100%;
 }
 
 #urlbar {
@@ -16,7 +15,7 @@
 
 /* Center the URL bar */
 toolbarspring {
-	max-width: 1000px !important;
+	max-width: 100% !important;
 }
 
 #stop-reload-button + toolbarspring {
@@ -24,7 +23,7 @@ toolbarspring {
 }
 
 #urlbar-container + toolbarspring {
-	width: 1000px !important;
+	width: 100% !important;
 }
 
 /* URL bar */
@@ -35,7 +34,7 @@ toolbarspring {
 	border-radius: 8px !important;
 	border: 1px solid transparent !important;
 	padding: 0 0 !important;
-	max-width: var(--urlbar-width) !important;
+	/* max-width: var(--urlbar-width) !important; */
     opacity: 0 !important;
     width: 1px !important;
     overflow: hidden;
@@ -46,6 +45,7 @@ toolbarspring {
 	background: transparent !important;
 	border-radius: 8px !important;
 	padding: 0 0 !important;
+    width: 100% !important;
 }
 
 #urlbar:-moz-window-inactive {
@@ -58,14 +58,14 @@ toolbarspring {
 #urlbar #urlbar-input-container {
 	padding: 0 !important;
 	width: var(--urlbar-width) !important;
-	min-width: var(--urlbar-minwidth) !important;
+	min-width: var(--urlbar-width) !important;
 }
 
 :root[sizemode="maximized"] #urlbar,
 :root[sizemode="maximized"] #urlbar-container,
 :root[sizemode="maximized"] #wrapper-urlbar-container {
 	width: var(--urlbar-width) !important;
-	min-width: var(--urlbar-minwidth) !important;
+	min-width: var(--urlbar-width) !important;
 }
 
 #urlbar[breakout][breakout-extend] {
