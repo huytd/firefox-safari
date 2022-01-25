@@ -36,6 +36,7 @@ toolbarspring {
 	border: 1px solid transparent !important;
 	padding: 0 0 !important;
 	max-width: var(--urlbar-width) !important;
+    opacity: 0 !important;
     width: 1px !important;
     overflow: hidden;
 }
@@ -73,11 +74,13 @@ toolbarspring {
 	width: var(--urlbar-width) !important;
 	z-index: 5 !important;
 	padding: 0 0 !important;
+    opacity: 0 !important;
 }
 #urlbar[breakout][breakout-extend][open] {
 	height: auto !important;
 	max-height: unset !important;
     width: 100% !important;
+    opacity: 1 !important;
 }
 #urlbar[breakout][breakout-extend] #urlbar-input-container {
 	height: 32px !important;
