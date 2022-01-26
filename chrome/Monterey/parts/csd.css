@@ -44,7 +44,7 @@
 	-moz-appearance: none !important;
 	padding: 0 3px 0 4px;
 	position: absolute !important;
-	right: 8px;
+	left: 0px;
 	top: 0;
 	display: block !important;
 }
@@ -72,13 +72,24 @@
 	opacity: 0 !important;
 }
 
+:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox .titlebar-min,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min,
+:root[tabsintitlebar][inFullscreen] #window-controls #minimize-button,
+:root[tabsintitlebar] #window-controls #minimize-button {
+    display: none !important;
+}
+
 /* Remove close and minimize buttons from fullscreen buttons */
 :root[tabsintitlebar][inFullscreen] #window-controls #close-button,
-:root[tabsintitlebar][inFullscreen] #window-controls #minimize-button,
 :root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox-container,
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox .titlebar-close,
-:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox .titlebar-min {
-	display: none !important;
+:root[tabsintitlebar][inFullscreen] #titlebar .titlebar-buttonbox .titlebar-close {
+	display: block !important;
+}
+
+:root[tabsintitlebar] #window-controls #close-button,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close {
+	display: block !important;
 }
 
 /* Left window buttons */
